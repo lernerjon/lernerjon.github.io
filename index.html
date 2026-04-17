@@ -21,262 +21,42 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--sand-light);
-      color: var(--ink);
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 19px;
-      line-height: 1.8;
-    }
-
-    /* HEADER */
-    header {
-      background: var(--sand);
-      border-bottom: 1px solid var(--sand-dark);
-      padding: 2.5rem 0 2rem;
-    }
-
-    .header-inner {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 2rem;
-    }
-
-    .site-name {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2.2rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      line-height: 1.1;
-      color: var(--ink);
-    }
-
-    .site-title {
-      font-family: 'Jost', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 300;
-      color: var(--ink-light);
-      margin-top: 0.4rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    nav {
-      display: flex;
-      gap: 2rem;
-      flex-shrink: 0;
-      padding-bottom: 0.15rem;
-    }
-
-    nav a {
-      font-family: 'Jost', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-mid);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    body { background: var(--sand-light); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; line-height: 1.8; }
+    header { background: var(--sand); border-bottom: 1px solid var(--sand-dark); padding: 2.5rem 0 2rem; }
+    .header-inner { max-width: 860px; margin: 0 auto; padding: 0 2.5rem; display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; }
+    .site-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.2rem; font-weight: 600; letter-spacing: 0.02em; line-height: 1.1; color: var(--ink); }
+    .site-title { font-family: 'Jost', sans-serif; font-size: 0.78rem; font-weight: 300; color: var(--ink-light); margin-top: 0.4rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    nav { display: flex; gap: 2rem; flex-shrink: 0; padding-bottom: 0.15rem; }
+    nav a { font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; }
     nav a:hover { color: var(--teal); }
-
-    /* MAIN */
-    main {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 2.5rem;
-    }
-
-    section {
-      padding: 4rem 0;
-      border-bottom: 1px solid var(--sand-dark);
-    }
-
+    main { max-width: 860px; margin: 0 auto; padding: 0 2.5rem; }
+    section { padding: 4rem 0; border-bottom: 1px solid var(--sand-dark); }
     section:last-child { border-bottom: none; }
-
-    .section-label {
-      font-family: 'Jost', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: 1.75rem;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: flex;
-      gap: 3rem;
-      align-items: flex-start;
-    }
-
+    .section-label { font-family: 'Jost', sans-serif; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.75rem; }
+    .about-grid { display: flex; gap: 3rem; align-items: flex-start; }
     .about-text { flex: 1; min-width: 0; }
-
-    .about-photo {
-      width: 155px;
-      height: 155px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      border: 2px solid var(--sand-dark);
-      flex-shrink: 0;
-      filter: sepia(10%);
-    }
-
-    .about-text p {
-      color: var(--ink-mid);
-      margin-bottom: 1rem;
-      font-size: 1.08rem;
-    }
-
+    .about-photo { width: 155px; height: 155px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid var(--sand-dark); flex-shrink: 0; filter: sepia(10%); }
+    .about-text p { color: var(--ink-mid); margin-bottom: 1rem; font-size: 1.08rem; }
     .about-text p:last-child { margin-bottom: 0; }
-
-    .contact-line {
-      margin-top: 1.5rem;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 300;
-      letter-spacing: 0.04em;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      align-items: center;
-    }
-
-    .contact-line a {
-      color: var(--teal);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    .contact-line { margin-top: 1.5rem; font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 300; letter-spacing: 0.04em; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    .contact-line a { color: var(--teal); text-decoration: none; transition: color 0.2s; }
     .contact-line a:hover { color: var(--teal-dark); }
     .contact-sep { color: var(--sand-dark); }
-
-    /* RESEARCH */
-    .research-body p {
-      color: var(--ink-mid);
-      margin-bottom: 1.1rem;
-      font-size: 1.05rem;
-    }
-
+    .research-body p { color: var(--ink-mid); margin-bottom: 1.1rem; font-size: 1.05rem; }
     .research-body p:last-child { margin-bottom: 0; }
-
-    /* PUBLICATIONS */
-    .pub-list {
-      list-style: none;
-      display: grid;
-      gap: 1.75rem;
-    }
-
-    .pub-list li {
-      padding-left: 1.5rem;
-      position: relative;
-      font-size: 0.95rem;
-    }
-
-    .pub-list li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--tan);
-    }
-
-    .pub-title {
-      font-style: italic;
-      color: var(--ink);
-      display: block;
-      margin-bottom: 0.2rem;
-      font-size: 1rem;
-    }
-
-    .pub-authors {
-      color: var(--ink-light);
-      display: block;
-      font-size: 0.88rem;
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-    }
-
-    .pub-journal {
-      color: var(--ink-light);
-      font-size: 0.85rem;
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      display: block;
-      margin-top: 0.15rem;
-    }
-
-    .pub-link {
-      color: var(--teal);
-      text-decoration: none;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 300;
-      transition: color 0.2s;
-    }
-
+    .pub-list { list-style: none; display: grid; gap: 1.75rem; }
+    .pub-list li { padding-left: 1.5rem; position: relative; font-size: 0.95rem; }
+    .pub-list li::before { content: '—'; position: absolute; left: 0; color: var(--tan); }
+    .pub-title { font-style: italic; color: var(--ink); display: block; margin-bottom: 0.2rem; font-size: 1rem; }
+    .pub-authors { color: var(--ink-light); display: block; font-size: 0.88rem; font-family: 'Jost', sans-serif; font-weight: 300; }
+    .pub-journal { color: var(--ink-light); font-size: 0.85rem; font-family: 'Jost', sans-serif; font-weight: 300; display: block; margin-top: 0.15rem; }
+    .pub-link { color: var(--teal); text-decoration: none; font-family: 'Jost', sans-serif; font-size: 0.78rem; font-weight: 300; transition: color 0.2s; }
     .pub-link:hover { color: var(--teal-dark); }
-
-    /* WRITING */
-    .essay-card {
-      background: var(--sand);
-      border: 1px solid var(--sand-dark);
-      border-left: 3px solid var(--teal);
-      padding: 1.6rem 1.8rem;
-    }
-
-    .essay-card h3 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      font-style: italic;
-      color: var(--ink);
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
-    }
-
-    .essay-card p {
-      font-size: 0.92rem;
-      color: var(--ink-light);
-      margin-bottom: 0.75rem;
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      line-height: 1.65;
-    }
-
-    .essay-tag {
-      display: inline-block;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--teal);
-      border: 1px solid var(--teal);
-      padding: 0.12rem 0.5rem;
-      border-radius: 1px;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--sand-dark);
-      background: var(--sand);
-      padding: 2rem 0;
-      text-align: center;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 300;
-      letter-spacing: 0.06em;
-      color: var(--ink-light);
-    }
-
+    .essay-card { background: var(--sand); border: 1px solid var(--sand-dark); border-left: 3px solid var(--teal); padding: 1.6rem 1.8rem; }
+    .essay-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; font-weight: 600; font-style: italic; color: var(--ink); margin-bottom: 0.5rem; line-height: 1.4; }
+    .essay-card p { font-size: 0.92rem; color: var(--ink-light); margin-bottom: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 300; line-height: 1.65; }
+    .essay-tag { display: inline-block; font-family: 'Jost', sans-serif; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); border: 1px solid var(--teal); padding: 0.12rem 0.5rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--sand-dark); background: var(--sand); padding: 2rem 0; text-align: center; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 300; letter-spacing: 0.06em; color: var(--ink-light); }
     @media (max-width: 600px) {
       .header-inner { flex-direction: column; align-items: flex-start; }
       nav { flex-wrap: wrap; gap: 1rem; }
@@ -309,11 +89,11 @@
     <div class="section-label">About</div>
     <div class="about-grid">
       <div class="about-text">
-        <p>I am an Assistant Professor in the Department of Biochemistry and Molecular Genetics at Midwestern University in Downers Grove, IL. My scientific career has been driven by a fascination for transcription factors as biological tools to change a cell type into another cell type, an approach called cellular reprogramming.</p>
+        <p>I am an Assistant Professor in the Department of Biochemistry and Molecular Genetics at Midwestern University in Downers Grove, IL. My scientific career has been driven by a fascination for transcription factors as biological engineering tools capable of converting one cell type into another, a process called cellular reprogramming.</p>
         <div class="contact-line">
           <a href="mailto:jlerne@midwestern.edu">jlerne@midwestern.edu</a>
           <span class="contact-sep">&middot;</span>
-          <a href="CV_Lerner_2025.pdf" target="_blank">Curriculum Vitae</a>
+          <a href="CV_Lerner_2025_v2.pdf" target="_blank">Curriculum Vitae</a>
           <span class="contact-sep">&middot;</span>
           <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AEk_c1sBk116PTnF4BIex95v23s3S3fWYNrGHejN3OkoZLA33hIhe7KmEBSujvErBB8ByfP0JRqRMavUH3TG_g&user=7eIC5ckAAAAJ" target="_blank">Google Scholar</a>
           <span class="contact-sep">&middot;</span>
@@ -336,13 +116,6 @@
   <section id="publications">
     <div class="section-label">Selected Publications</div>
     <ul class="pub-list">
-
-      <li>
-        <span class="pub-title">HNF1&beta; bookmarking involves Topoisomerase 1 activation and DNA topology relaxation in mitotic chromatin</span>
-        <span class="pub-authors">Lerner J. et al.</span>
-        <span class="pub-journal">Cell Reports &middot; 2024</span>
-        <a class="pub-link" href="https://doi.org/10.1016/j.celrep.2024.114805" target="_blank">doi: 10.1016/j.celrep.2024.114805</a>
-      </li>
 
       <li>
         <span class="pub-title">Different chromatin-scanning modes lead to targeting of compacted chromatin by pioneer factors FOXA1 and SOX2</span>
