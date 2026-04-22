@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost in Transcription | Jonathan Lerner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sand: #e8d5b0;
+      --sand-light: #f2e8d5;
+      --sand-dark: #c9a96e;
+      --teal: #2d545e;
+      --teal-dark: #12343b;
+      --ink: #1a1208;
+      --ink-mid: #3d2e1a;
+      --ink-light: #6b5a3e;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--sand-light); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; line-height: 1.85; }
+    header { background: var(--sand); border-bottom: 1px solid var(--sand-dark); padding: 2.5rem 0 2rem; }
+    .header-inner { max-width: 720px; margin: 0 auto; padding: 0 2.5rem; }
+    .back-link { font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--teal); }
+    .essay-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.4rem; font-weight: 600; line-height: 1.15; color: var(--ink); margin-bottom: 0.4rem; }
+    .essay-subtitle { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--ink-light); margin-bottom: 1.2rem; }
+    .essay-meta { font-family: 'Jost', sans-serif; font-size: 0.78rem; font-weight: 300; letter-spacing: 0.06em; color: var(--ink-light); }
+    .epigraph { max-width: 720px; margin: 3rem auto 0; padding: 0 2.5rem; font-style: italic; color: var(--ink-light); font-size: 1rem; }
+    .epigraph .attribution { font-style: normal; font-family: 'Jost', sans-serif; font-size: 0.78rem; font-weight: 300; letter-spacing: 0.06em; margin-top: 0.3rem; color: var(--ink-light); }
+    main { max-width: 720px; margin: 0 auto; padding: 3.5rem 2.5rem 5rem; }
+    .section-heading { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.25rem; font-weight: 600; color: var(--ink); margin: 3rem 0 1rem; letter-spacing: 0.01em; }
+    p { color: var(--ink-mid); margin-bottom: 1.1rem; font-size: 1.05rem; }
+    p:last-child { margin-bottom: 0; }
+    p em { font-style: italic; color: var(--ink); }
+    .author-note { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--sand-dark); font-family: 'Jost', sans-serif; font-size: 0.78rem; font-weight: 300; color: var(--ink-light); line-height: 1.6; font-style: italic; }
+    footer { border-top: 1px solid var(--sand-dark); background: var(--sand); padding: 2rem 0; text-align: center; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 300; letter-spacing: 0.06em; color: var(--ink-light); }
+    footer a { color: var(--teal); text-decoration: none; }
+    footer a:hover { color: var(--teal-dark); }
+    @media (max-width: 600px) {
+      .essay-title { font-size: 1.8rem; }
+      main, .epigraph, .header-inner { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="back-link" href="index.html">&larr; Jonathan Lerner</a>
+    <div class="essay-title">Lost in Transcription</div>
+    <div class="essay-subtitle">The RNA-seq Analysis Gap and the Infrastructure We Never Built</div>
+    <div class="essay-meta">Jonathan Lerner &middot; Submitted to the Astera Institute scientist essay competition &middot; 2025</div>
+  </div>
+</header>
+
+<div class="epigraph">
+  <div>Sic parvis magna.</div>
+  <div class="attribution">Francis Drake</div>
+</div>
+
+<main>
+
+  <div class="section-heading">The Analysis Gap</div>
+
+  <p>Sequencing an entire transcriptome now costs less than a flight across the country. In many biology departments around the world, RNA sequencing (RNA-seq) has become a standard tool, as routine as a Western blot.</p>
+
+  <p>Yet, making sense of the data is a different story. Raw files sit on a server. A grad student inherits an unfathomable pipeline from the postdoc who left last spring. A colleague sends samples to a third-party service, then waits weeks for a cryptic spreadsheet, with access to the analysis environment set to expire in sixty days. Results from a collaborator can&rsquo;t be compared to yours because nobody ran the same normalization.</p>
+
+  <p><em>The bottleneck isn&rsquo;t the experiment anymore. Quietly, it has shifted to data interpretation. And we have collectively failed to build the infrastructure to match.</em></p>
+
+  <div class="section-heading">The Stakes Are Rising</div>
+
+  <p>RNA-seq has become the closest thing modern biology has to a universal assay, used across model organisms and human tissue, in developmental biology and immunology, in basic research and translational medicine. When a lab wants to understand what a cell is doing, RNA-seq is almost always part of the answer.</p>
+
+  <p>Its clinical footprint is also rapidly expanding. In oncology, tumor transcriptomics enable diagnosis and classification of cancers and inform treatment decisions. Rare disease diagnosis increasingly relies on RNA-seq, for example to catch splicing mutations invisible to standard genomic panels. Pharmacogenomics incorporates RNA-seq-derived gene expression data to help predict how a patient will respond to a drug. The same assay that fills our academic freezers and servers will progressively become part of the diagnostic infrastructure.</p>
+
+  <p>This considerably raises the stakes. In an academic lab, a fragile pipeline is a reproducibility problem. In a clinical setting, it becomes a patient safety issue.</p>
+
+  <p><em>And RNA-seq is just the beginning. Single-cell transcriptomics already transforms how we understand cellular heterogeneity in disease, and epigenomic approaches (Bisulfite sequencing, ATAC-seq, ChIP-seq) are emerging as powerful tools for precision medicine. If we cannot build robust, accessible infrastructure for standard, bulk RNA-seq, we have no realistic path to handle what is coming.</em></p>
+
+  <div class="section-heading">The Problem: Fragile, Artisanal, Inaccessible</div>
+
+  <p>Ask any biologist who has tried to analyze RNA-seq data without dedicated computational support, and you will hear versions of the same story: a pipeline patched together from online tutorials, a conda environment that broke for elusive reasons, or results that cannot be reproduced six months later because nobody documented the exact parameters used.</p>
+
+  <p>Even at well-funded, prestigious research universities, RNA-seq analysis typically depends on finding the right person: a skilled bioinformatician, a generous collaborator in a core facility, a graduate student who taught themselves R. Such solutions work until they don&rsquo;t: someone moves on, the core facility backlog stretches to six weeks, or the student graduates. In all cases, the knowledge walks out the door with them.</p>
+
+  <p><em>What persists is thus not infrastructure. It is a series of local, person-dependent workarounds that must be rebuilt from scratch in every lab that needs them.</em></p>
+
+  <div class="section-heading">Why It Persists</div>
+
+  <p>The analysis gap is not a mystery. It persists because academic incentives make it insurmountable: credit in biology flows toward discovery. A bioinformatician who spent two years building a robust, reusable analysis pipeline, saving dozens of labs hundreds of hours each will not be rewarded in any systematic way. No tenure committee weighs community infrastructure; no grant mechanism funds tools that serve everyone rather than advancing one lab&rsquo;s specific scientific agenda. The people most capable of building generalizable infrastructure have every incentive to build something that advances their own research instead.</p>
+
+  <p>The coding culture of academic bioinformatics can also make this worse. Software engineers from the private sector who encounter bioinformatics scripts are sometimes struck by hardcoded file paths, absent version control or error handling, undocumented dependencies, and code that seems written once and never touched again. These are structural reasons for which pipelines break, results cannot be reproduced, and tools fall apart the moment the original author moves on. Academic biology never developed a software engineering culture because it never needed one until very recently, and nobody was rewarded for it.</p>
+
+  <p>This fragility produces behaviors that would seem absurd in any other engineering context. A universal piece of advice passed among trainees starting bioinformatics: never update RStudio, because dependencies will stop working unpredictably. I still routinely click &lsquo;Remind later&rsquo; at every startup. A field built on the scientific method has developed a norm of actively refusing software updates, perhaps the most honest summary of where things stand.</p>
+
+  <p><em>There is one more structural vulnerability, rarely discussed openly. The open-source tools underpinning RNA-seq analysis are a genuine collective achievement. But most are maintained by one or two academics, on soft money, as a side project, with no clear succession plan. When a maintainer moves on, the tool quietly rots, and because everything downstream depends on it, that rot propagates invisibly through thousands of pipelines. This has already happened with several critical bioinformatics tools, now abandoned GitHub repositories that half the field still silently relies on. The open-source foundation is simultaneously one of the greatest infrastructure successes of modern biology and a clear illustration of its core failure: critical shared resources treated as passion projects rather than sustained community infrastructure.</em></p>
+
+  <div class="section-heading">Genomics Needs Its Windows Moment</div>
+
+  <p>The tools that were supposed to solve this (Galaxy, nf-core, and others) represent heroic technical accomplishments. But they were built by bioinformaticians, for bioinformaticians: their interfaces assume a user fluent in workflows, job schedulers, and containerization. I experienced it myself: despite a strong background in molecular biology, I could never gain traction with Galaxy. The interface didn&rsquo;t just have a learning curve: it made clear that it hadn&rsquo;t been designed for me.</p>
+
+  <p>In 1995, my dad brought home a Power Mac, and my brother and I spent many hours on an educational software called Doom II. Around the same time, I remember visiting a friend who had a PC. Watching him type commands into a black screen to launch the game seemed arcane and completely backwards to me. Why would a computer work that way? Of course, his DOS machine was doing everything mine could do and more. The difference wasn&rsquo;t power: it was who the interface had been designed for.</p>
+
+  <p>This gap between a genuinely capable machine and one that ordinary people could use, is precisely where genomics stands today. The pipelines are DOS: powerful and battle-tested, but opaque to anyone without the fluency to speak their language. The field needs its Windows moment: not a faster version of what already exists but a rethinking of who the intended user is. That shift changes every downstream decision: the terminology in the interface, what is automated versus exposed, what outputs look like and who can read them.</p>
+
+  <p><em>That transition in computing was not a dumbing-down. It was an explosion in who could participate. There is no reason genomics should be any different.</em></p>
+
+  <div class="section-heading">Why Now</div>
+
+  <p>Three factors have converged to make now the right moment. We have already mentioned the first two: the collapse of sequencing costs, and the clinical expansion of RNA-seq.</p>
+
+  <p>The third, and most telling, is the informal adoption of large language models (LLMs), that has revealed something important, which I witnessed in my own lab. I regularly place students without coding background on genomics projects. By the end of a single quarter, I see most working independently, not because they learned bioinformatics, but because they found a way to have a conversation about it. LLMs are the informal bridge between their biological intuition and computation: instead of mastering the tools, they found a workaround for the interface.</p>
+
+  <p><em>This is not an argument that LLMs per se are the right infrastructure. In fact, they are not: existing conversational approaches carry real limitations such as privacy concerns, reproducibility, integration within standardized pipelines, clinical validation. Yet, their success is evidence that domain scientists are not the obstacle, and the right design philosophy can close the gap. The interface problem is solvable. What is missing is the institutional commitment to solve it properly.</em></p>
+
+  <div class="section-heading">The Proposal</div>
+
+  <p>The technical components to build something better already exist. On one side: robust, community-validated open-source pipelines covering the full RNA-seq workflow from quality control to differential expression. On the other: a new generation of AI agents capable of serving as genuine conversational interfaces. What needs building is the bridge: a genomics-specific agent designed around the domain scientist, sitting on top of rigorously maintained pipelines, with privacy, reproducibility, and clinical applicability built-in from the start.</p>
+
+  <p>What we need is to rebuild the infrastructure around a different user, with software engineering discipline: version controlled, containerized, tested, documented, and governed as a community resource. The ideal architecture would be extensible to eventually accommodate single-cell transcriptomics and epigenomic approaches, which are already defining the medicine of tomorrow.</p>
+
+  <p>This experiment has clear and measurable outcomes. Can a domain scientist with no coding background reach independence on a real dataset in a defined period? Can results be reproduced across institutions using the same system? Can the same infrastructure be deployed in a clinical setting with appropriate privacy and regulatory standards? These are real questions with real answers. <em>The experiment can fail. That is precisely what makes it worth running.</em></p>
+
+  <div class="section-heading">Greatness from Small Beginnings</div>
+
+  <p>The Protein Data Bank began with seven structures and shared frustration. arXiv was just an email list and a server. The most durable scientific infrastructure starts not with a master plan but with scientists who could not ignore a problem any longer.</p>
+
+  <p>The RNA-seq analysis gap described here is not a hard technical problem. Pipelines exist, the biology is well-understood and the interface breakthrough is already happening across thousands of labs, in the form of trainees asking ChatGPT how to run a DESeq2 analysis. What is missing is the institutional will to treat analysis as infrastructure rather than service, and the sustained support to build it for the right user and keep it running after the grant ends.</p>
+
+  <p>The immediate goal is practical: a platform that lets a molecular biologist run a rigorous RNA-seq analysis without a bioinformatician, without a sixty-day server lease, without inheriting cryptic scripts from someone else. The deeper question is what becomes possible when the barrier falls further still. Mathematics has a property that other technical fields sometimes lack: a motivated non-expert can approach genuine open problems with nothing but curiosity and a willingness to think carefully. Genomics, with the right infrastructure, could have something similar. Public tumor datasets already exist. The biological questions embedded in them are real and largely unanswered. A high schooler, a clinician following a hunch, a biologist in a country without access to core facilities: none of them are currently equipped to participate. Not because the problems require esoteric expertise. <em>Because the interface has never been built for them.</em></p>
+
+  <div class="author-note">
+    <strong>Author&rsquo;s note:</strong> Claude (Anthropic) was used as a writing and editing collaborator in developing this essay. The arguments, personal observations, and proposed experiment are entirely my own.
+  </div>
+
+</main>
+
+<footer>
+  <a href="index.html">&larr; Back to lernerjon.github.io</a>
+</footer>
+
+</body>
+</html>

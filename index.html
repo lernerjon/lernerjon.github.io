@@ -18,7 +18,6 @@
       --ink-mid: #3d2e1a;
       --ink-light: #6b5a3e;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { background: var(--sand-light); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; line-height: 1.8; }
@@ -52,10 +51,11 @@
     .pub-journal { color: var(--ink-light); font-size: 0.85rem; font-family: 'Jost', sans-serif; font-weight: 300; display: block; margin-top: 0.15rem; }
     .pub-link { color: var(--teal); text-decoration: none; font-family: 'Jost', sans-serif; font-size: 0.78rem; font-weight: 300; transition: color 0.2s; }
     .pub-link:hover { color: var(--teal-dark); }
-    .essay-card { background: var(--sand); border: 1px solid var(--sand-dark); border-left: 3px solid var(--teal); padding: 1.6rem 1.8rem; }
+    .essay-card { background: var(--sand); border: 1px solid var(--sand-dark); border-left: 3px solid var(--teal); padding: 1.6rem 1.8rem; text-decoration: none; display: block; transition: border-left-color 0.2s; }
+    .essay-card:hover { border-left-color: var(--teal-dark); }
     .essay-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; font-weight: 600; font-style: italic; color: var(--ink); margin-bottom: 0.5rem; line-height: 1.4; }
     .essay-card p { font-size: 0.92rem; color: var(--ink-light); margin-bottom: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 300; line-height: 1.65; }
-    .essay-tag { display: inline-block; font-family: 'Jost', sans-serif; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); border: 1px solid var(--teal); padding: 0.12rem 0.5rem; border-radius: 1px; }
+    .essay-link { font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); }
     footer { border-top: 1px solid var(--sand-dark); background: var(--sand); padding: 2rem 0; text-align: center; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 300; letter-spacing: 0.06em; color: var(--ink-light); }
     @media (max-width: 600px) {
       .header-inner { flex-direction: column; align-items: flex-start; }
@@ -143,11 +143,11 @@
 
   <section id="writing">
     <div class="section-label">Writing</div>
-    <div class="essay-card">
+    <a class="essay-card" href="essay.html">
       <h3>Lost in Transcription: The RNA-seq Analysis Gap and the Infrastructure We Never Built</h3>
       <p>An essay on the structural and systemic failures that keep genomic analysis inaccessible to most biologists, and what it would take to build the infrastructure the field actually needs. Submitted to the Astera Institute scientist essay competition, 2025.</p>
-      <span class="essay-tag">Forthcoming</span>
-    </div>
+      <span class="essay-link">Read essay &rarr;</span>
+    </a>
   </section>
 
 </main>
